@@ -1,0 +1,178 @@
+#########################
+# kompletterings frågor #
+#########################
+1. Tycker du att det finns någon fördel att använda funktioner för att utföra olika uppgifter i programmet, 
+jämfört med hur det såg ut i Inlämningsuppgift 2 där allt hände i huvudprogrammet?
+Svar:
+    Jag tycker att det finns många fördelar med att använda funktioner. Det första är att koden blir mycket lättare att läsa på grund av man kan abstrahera bort saker.
+    För exempel man behöver inte veta hur funktionen berakna fungerar men fortfarande vet dess funktion. För det andra så kan man återanvända kod som i funktionen lasEttTal
+    där funktionen kallas två gånger utifrån main funktionen. Om vi inte använde funktioner så är man tvungen att skriva koden flera gånger. För det tredje är det också lättare
+    att andra kod då man endast behöver ändra i funktionen medan om man inte använde funktioner så är man tvungen att ändra på alla ställen man har skrivit det kodstycket.
+
+2. I någon av dina skrivna funktioner använder du dig troligen av referensparametrar. Varför gör man inte det jämt?
+Svar:
+    Man gör inte det jämnt på grund av att ibland en pekare tar mer minne(beroende på systemet) än små objekt som int och char. Det blir också långsammare med referens då man måste
+    "dereference" pekaren. Det är också så att om man vill ändra på variablen i funktionen men inte utanför funktionen så kan man inte skicka det som ett referens.
+###############
+# Test data 1 #
+###############
+
+Programmet kommer att be om två siffor och en operation där den kommer att returnera resultatet när operationen
+är utförd på alla tal mellan de angivna siffrorna och de angivna siffrorna.
+De givna talen behöver inte vara i storleksordingen.
+op:
+a = addera
+m = multiplicera
+k = kvadratsumman
+Skriv en av talgränsen: 3
+Skriv en av talgränsen: 5
+
+a = addera
+m = multiplicera
+k = kvadratsumman
+Skriv ett operation: a
+Resultatet är 12
+
+###############
+# Test data 2 #
+###############
+
+Programmet kommer att be om två siffor och en operation där den kommer att returnera resultatet när operationen
+är utförd på alla tal mellan de angivna siffrorna och de angivna siffrorna.
+De givna talen behöver inte vara i storleksordingen.
+op:
+a = addera
+m = multiplicera
+k = kvadratsumman
+Skriv en av talgränsen: 3
+Skriv en av talgränsen: 5
+
+a = addera
+m = multiplicera
+k = kvadratsumman
+Skriv ett operation: m
+Resultatet är 60
+
+###############
+# Test data 3 #
+###############
+
+Programmet kommer att be om två siffor och en operation där den kommer att returnera resultatet när operationen
+är utförd på alla tal mellan de angivna siffrorna och de angivna siffrorna.
+De givna talen behöver inte vara i storleksordingen.
+op:
+a = addera
+m = multiplicera
+k = kvadratsumman
+Skriv en av talgränsen: 3
+Skriv en av talgränsen: 5
+
+a = addera
+m = multiplicera
+k = kvadratsumman
+Skriv ett operation: k
+Resultatet är 50
+
+###############
+# Test data 4 #
+###############
+
+Programmet kommer att be om två siffor och en operation där den kommer att returnera resultatet när operationen
+är utförd på alla tal mellan de angivna siffrorna och de angivna siffrorna.
+De givna talen behöver inte vara i storleksordingen.
+op:
+a = addera
+m = multiplicera
+k = kvadratsumman
+Skriv en av talgränsen: -3
+Skriv en av talgränsen: 5
+
+a = addera
+m = multiplicera
+k = kvadratsumman
+Skriv ett operation: m
+Resultatet är 0
+
+###############
+# Test data 5 #
+###############
+
+Programmet kommer att be om två siffor och en operation där den kommer att returnera resultatet när operationen
+är utförd på alla tal mellan de angivna siffrorna och de angivna siffrorna.
+De givna talen behöver inte vara i storleksordingen.
+op:
+a = addera
+m = multiplicera
+k = kvadratsumman
+Skriv en av talgränsen: 5
+Skriv en av talgränsen: 3
+
+a = addera
+m = multiplicera
+k = kvadratsumman
+Skriv ett operation: a
+Resultatet är 12
+
+###############
+# Test data 6 #
+###############
+
+Programmet kommer att be om två siffor och en operation där den kommer att returnera resultatet när operationen
+är utförd på alla tal mellan de angivna siffrorna och de angivna siffrorna.
+De givna talen behöver inte vara i storleksordingen.
+op:
+a = addera
+m = multiplicera
+k = kvadratsumman
+Skriv en av talgränsen: -3
+Skriv en av talgränsen: -5
+
+a = addera
+m = multiplicera
+k = kvadratsumman
+Skriv ett operation: a
+Resultatet är -12
+
+###############
+# Test data 7 #
+###############
+
+Programmet kommer att be om två siffor och en operation där den kommer att returnera resultatet när operationen
+är utförd på alla tal mellan de angivna siffrorna och de angivna siffrorna.
+De givna talen behöver inte vara i storleksordingen.
+op:
+a = addera
+m = multiplicera
+k = kvadratsumman
+Skriv en av talgränsen: 1
+Skriv en av talgränsen: 100
+
+a = addera
+m = multiplicera
+k = kvadratsumman
+Skriv ett operation: k
+Resultatet är 338350
+
+###############
+# Test data 8 #
+###############
+
+Programmet kommer att be om två siffor och en operation där den kommer att returnera resultatet när operationen
+är utförd på alla tal mellan de angivna siffrorna och de angivna siffrorna.
+De givna talen behöver inte vara i storleksordingen.
+op:
+a = addera
+m = multiplicera
+k = kvadratsumman
+Skriv en av talgränsen: 1
+Skriv en av talgränsen: 1000
+
+a = addera
+m = multiplicera
+k = kvadratsumman
+Skriv ett operation: m
+Resultatet är 0
+
+kommentar:
+    Det blev förmodligen ett overflow i variablen dvs talen ryms inte. Jag tror att det först blir ett negativt tal 
+    innan det blir 0 på grund av att den mest signifikanta biten blir ett ställd.

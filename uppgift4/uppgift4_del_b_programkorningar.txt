@@ -1,0 +1,178 @@
+**************
+* doyle      *
+**************
+Ange filnamn?
+text/doyle
+
+Resultatet för bokstäverna A-Z
+Totala antalet bokstäver: 12885
+engelska har kvadratsumma = 1.75771
+franska har kvadratsumma = 96.1956
+svenska har kvadratsumma = 73.3371
+tyska har kvadratsumma = 116.072
+Det är mest troligt att språket är engelska
+
+Bokstavsfördelning:
+
+A ****************
+B **
+C ******
+D *******
+E ************************
+F ****
+G **
+H ************
+I ***************
+J
+K *
+L *******
+M *****
+N ************
+O ***************
+P ***
+Q
+R ***********
+S ************
+T ******************
+U *****
+V **
+W ****
+X
+Y ****
+Z
+
+**************
+* goethe.txt *
+**************
+Ange filnamn?
+text/goethe.txt
+
+Resultatet för bokstäverna A-Z
+Totala antalet bokstäver: 14027
+engelska har kvadratsumma = 107.856
+franska har kvadratsumma = 85.205
+svenska har kvadratsumma = 160.318
+tyska har kvadratsumma = 1.04313
+Det är mest troligt att språket är tyska
+
+Bokstavsfördelning:
+
+A **********
+B ***
+C *******
+D *********
+E *********************************
+F **
+G ******
+H ***********
+I *****************
+J
+K **
+L ******
+M ******
+N *********************
+O ****
+P
+Q
+R ************
+S *************
+T ***********
+U *******
+V *
+W ***
+X
+Y *
+Z **
+
+**************
+* lagerlof   *
+**************
+Ange filnamn?
+text/lagerlof
+
+Resultatet för bokstäverna A-Z
+Totala antalet bokstäver: 12221
+engelska har kvadratsumma = 86.6804
+franska har kvadratsumma = 145.722
+svenska har kvadratsumma = 8.88258
+tyska har kvadratsumma = 170.223
+Det är mest troligt att språket är svenska
+
+Bokstavsfördelning:
+
+A **********************
+B *
+C **
+D ***********
+E *******************
+F ****
+G ********
+H *******
+I ********
+J **
+K ******
+L **********
+M *******
+N ******************
+O ********
+P **
+Q
+R **************
+S *************
+T *****************
+U ***
+V ******
+W
+X
+Y
+Z
+
+**************
+* verne.txt  *
+**************
+Ange filnamn?
+text/verne.txt
+
+Resultatet för bokstäverna A-Z
+Totala antalet bokstäver: 11417
+engelska har kvadratsumma = 112.425
+franska har kvadratsumma = 0.885143
+svenska har kvadratsumma = 149.256
+tyska har kvadratsumma = 90.491
+Det är mest troligt att språket är franska
+
+Bokstavsfördelning:
+
+A ****************
+B **
+C *******
+D ********
+E **********************************
+F *
+G **
+H *
+I *************
+J
+K
+L **********
+M *****
+N ***************
+O **********
+P *****
+Q *
+R *************
+S ****************
+T *************
+U ***********
+V **
+W
+X *
+Y
+Z
+
+***********************
+* file existerar inte *
+***********************
+Ange filnamn?
+Lisa.txt
+Det finns inget fil med namnet Lisa.txt
