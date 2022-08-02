@@ -1,0 +1,207 @@
+##############
+# Testdata 1 #
+##############
+Ange filnamn?
+text/doyle
+
+Resultatet för bokstäverna A-Z
+Totala antalet bokstäver: 12885
+engelska har kvadratsumma = 1.75771
+franska har kvadratsumma = 96.1956
+svenska har kvadratsumma = 73.3371
+tyska har kvadratsumma = 116.072
+Det är mest troligt att språket är engelska
+
+Bokstavsfördelning:
+
+A ****************
+B **
+C ******
+D *******
+E ************************
+F ****
+G **
+H ************
+I ***************
+J
+K *
+L *******
+M *****
+N ************
+O ***************
+P ***
+Q
+R ***********
+S ************
+T ******************
+U *****
+V **
+W ****
+X
+Y ****
+Z
+
+=====================================================================================================
+##############
+# Testdata 2 #
+##############
+Ange filnamn?
+text/goethe.txt
+
+Resultatet för bokstäverna A-Z
+Totala antalet bokstäver: 14027
+engelska har kvadratsumma = 107.856
+franska har kvadratsumma = 85.205
+svenska har kvadratsumma = 160.318
+tyska har kvadratsumma = 1.04313
+Det är mest troligt att språket är tyska
+
+Bokstavsfördelning:
+
+A **********
+B ***
+C *******
+D *********
+E *********************************
+F **
+G ******
+H ***********
+I *****************
+J
+K **
+L ******
+M ******
+N *********************
+O ****
+P
+Q
+R ************
+S *************
+T ***********
+U *******
+V *
+W ***
+X
+Y *
+Z **
+
+=====================================================================================================
+##############
+# Testdata 3 #
+##############
+Ange filnamn?
+text/lagerlof
+
+Resultatet för bokstäverna A-Z
+Totala antalet bokstäver: 12221
+engelska har kvadratsumma = 86.6804
+franska har kvadratsumma = 145.722
+svenska har kvadratsumma = 8.88258
+tyska har kvadratsumma = 170.223
+Det är mest troligt att språket är svenska
+
+Bokstavsfördelning:
+
+A **********************
+B *
+C **
+D ***********
+E *******************
+F ****
+G ********
+H *******
+I ********
+J **
+K ******
+L **********
+M *******
+N ******************
+O ********
+P **
+Q
+R **************
+S *************
+T *****************
+U ***
+V ******
+W
+X
+Y
+Z
+
+=====================================================================================================
+##############
+# Testdata 4 #
+##############
+Ange filnamn?
+text/verne.txt
+
+Resultatet för bokstäverna A-Z
+Totala antalet bokstäver: 11417
+engelska har kvadratsumma = 112.425
+franska har kvadratsumma = 0.885143
+svenska har kvadratsumma = 149.256
+tyska har kvadratsumma = 90.491
+Det är mest troligt att språket är franska
+
+Bokstavsfördelning:
+
+A ****************
+B **
+C *******
+D ********
+E **********************************
+F *
+G **
+H *
+I *************
+J
+K
+L **********
+M *****
+N ***************
+O **********
+P *****
+Q *
+R *************
+S ****************
+T *************
+U ***********
+V **
+W
+X *
+Y
+Z
+
+=====================================================================================================
+##############
+# Testdata 5 #
+##############
+Ange filnamn?
+lisa.txt
+Det finns inget fil med namnet lisa.txt
+=====================================================================================================
+
+#########################
+# Kompletterande frågor #
+#########################
+
+* Finns det någon anledning varför vi beräknar både det absoluta och det relativa histogrammet i samma funktionsanrop?
+Svar:
+    För att man kan endast räkna ut den relativa om funktionen som beräknar den absoluta returnerar ett true. 
+    Det kan också vara att det blir lättare att använda klassen då man behöver bara kalla en funktion istället 
+    för två. Det kan också vara att den relativa histogrammet är mer värderfullt än den absoluta.
+
+* Tänk dig att vi lägger till en rad sist i huvudprogrammet som anropar funktionen setText med en ny text, då får vi 
+  resultatet att attributet text ändras, men histogrammen fortfarande är desamma och alltså inte hör ihop med den aktuella texten. 
+  Finns det något sätt att lösa det problemet? Du behöver bara svara med ord, inte programmera något nytt.
+Svar:
+    Behöver bara lägga till resetHistogram() och beraknaHistogram() i slutet of setText funktionen då borde den räkna om histogramet varje gång vi lägger in en ny text.
+    Det blir också så att användaren behöver aldrig kalla beraknaHistogram() då den blir kallad varje gång man ändrar texten.
+
+* Skulle man kunna inkludera funktionerna namn_pa_fil och inlasning i klassen? Skulle det göra någon skillnad på resultatet? 
+  Finns det några fördelar med att använda samma funktioner som tidigare?
+Svar:
+    Ja det går att lägga den i klassen. Man kan skapa en funktionen som kallar dessa metoder och därefter sätter den nya texten.
+    Jag tror att det skulle spara minne då man inte behöver spara texten i två olika ställen för att just nu har vi texten både i klassen och i main funktionen.
+    Fördelarna med den lösningen nu är att när man inte hittar filen så kan man avsluta programmet utan att ens behöva skapa klassen.

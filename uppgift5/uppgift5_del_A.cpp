@@ -16,6 +16,7 @@ using namespace std;
 // ist�llet f�r v�rdena 26 och 4 i programmet.
 const int ANTAL_BOKSTAVER = 26;  // A-Z
 const int ANTAL_SPRAK = 4;
+const int A_ASCII_NUMBER = 65;
 
 // 2d-arrayen TOLK_HJALP inneh�ller bokstavsfrekvensen i %
 // f�r fyra spr�k. TOLK_HJALP[0][0] �r frekvensen av
@@ -50,6 +51,7 @@ class Text {
   private:
     string text;
     int histogram[ANTAL_BOKSTAVER];
+    int number_of_characters;
 
     void resetHistogram();
   public:
@@ -88,19 +90,82 @@ int main()
 
 // -------------------------------------------------------
 // H�r skriver du klassimplementationen
+
+//********************************************************************************
+// Text klassen konstruktor
+// Syfte: Den skapar en text objekt där den absoluta histogramet är satt till 0.
+//********************************************************************************
 Text::Text() {
   resetHistogram(); 
 }
 
+//********************************************************************************
+// Metoden resetHistogram
+// Syfte: Den sätter alla index i histogram arrayen till 0.
+//********************************************************************************
 void Text::resetHistogram() {
   for (int i = 0; i < ANTAL_BOKSTAVER; ++i) histogram[i] = 0;
 }
 
-void Text:setText(const string &newText) {
+//********************************************************************************
+// Metoden setText
+// Syfte: Sätter objekt variablen "text" till den givna in parametern.
+// Inparametrar: newText - den nya texten.
+//********************************************************************************
+void Text::setText(const string &newText) {
   text = newText;
 }
 
-bool beraknaHistogramAbs()
+//***********************************************************************************************************************************
+// Metoden berakna_histogram_abs
+// Syfte: Funktionen beräknar antalet karaktärer som förekommmer i den givna strängen och mängden av giltiga karaktärer. 
+//        Resultatet sparas i ett given array of storleken ANTAL_BOKSTAVER där index 0 representerar A och index 1 respresenterar B.
+//        Mängden av giltiga karaktärer kommer att sparas i number_of_characters
+// Inparametrar: text - strängen som karaktärmängden kommer att beräknas.
+//               number_of_characters - är mängden av giltiga karaktärer (I denna version är det bara a-z och deras versaller).
+//               freqCounter - är arrayen där resultatet kommer att sparas.
+//
+//***********************************************************************************************************************************
+bool Text::beraknaHistogramAbs() {
+  // The index for the array.
+  int i;
+  number_of_characters = 0;
+  for (char c : text) {
+    //Turn everything to capitalize letter and take minus capital A ascii number so the letter A would be at index 0,
+    //While capital B would be at index 1.
+    i = toupper(c) - A_ASCII_NUMBER;
+    //Check if it was a character from A - Z otherwise skip it.
+    //The index must be between 0 and 25 if it was a valid character.
+    if (0 <= i && i < ANTAL_BOKSTAVER) {
+      ++number_of_characters;
+      ++histogram[i];
+    }
+  }
+
+  if (number_of_characters == 0) {
+    return false;
+  }
+  else {
+    return true;
+  }
+}
+
+//*******************************************************************************************************************************
+// Metoden skriv_histogram_abs
+// Syfte: Funktionen kommer att visa resultatet av berakna_histogram_abs där den kommer att visa hur många gånger ett karaktär
+//        förekommer och hur många giltiga karaktärer som finns.
+// Inparametrar: number_of_characters - är mängden av giltiga karaktärer (I denna version är det bara a-z och deras versaller).
+//               freqCounter - är arrayen som sparar resultatet av berakna_histogram_abs.
+//
+//*******************************************************************************************************************************
+void Text::skrivHistogramAbs() {
+  cout << endl << "Resultat för bokstäverna A-Z" << endl << endl << "Totala antalet bokstäver: " << number_of_characters << endl;
+
+  cout << endl << "Bokstavfördelning: " << endl << endl;
+  for (int i = 0; i < ANTAL_BOKSTAVER; ++i) {
+    cout << (char) (i+A_ASCII_NUMBER) << ": " << histogram[i] << endl;
+  }
+}
 
 //--------------------------------------------------------
 // Funktionsdefinitioner:
@@ -110,3 +175,7 @@ bool beraknaHistogramAbs()
 
 // -------------------------------------------------------
 // Rapport om uppgiften
+
+// Det finns inte så mycket att säga om denna del av uppgiften på grund av att de flesta funktionerna kan man bara kopiera från uppgift 4.
+// Det enda skillnaden är att man ska skapa klassen Text som har dessa funktioner som metoder och att den sparar den absoluta histogramet, texten och antalet
+// som objekt variabler.
